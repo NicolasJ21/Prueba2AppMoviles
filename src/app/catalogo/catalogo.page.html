@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Catalogo</ion-title>
+    <ion-buttons>
+      <ion-back-button defaulHref="/"></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div *ngIf="datosProducto">
+
+    <ion-card *ngFor="let item of datosProducto.products">
+      <ion-avatar>
+      <img [src]="item.thumbnail">
+      {{item.title}}
+      {{item.price}}
+      {{ item.discountPercentage}}
+      <ion-card-header>
+
+      </ion-card-header>
+      </ion-avatar>
+      <br>
+      <ion-card-content>
+
+
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
